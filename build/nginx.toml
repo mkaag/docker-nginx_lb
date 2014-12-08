@@ -1,0 +1,9 @@
+[template]
+prefix      = "/services/production"
+keys        = [ "/domain", "/root", "/upstream" ]
+owner       = "root"
+mode        = "0644"
+src         = "nginx.tmpl"
+dest        = "/etc/nginx/sites-enabled/app.conf"
+check_cmd   = "/usr/sbin/nginx -t"
+reload_cmd  = "/usr/sbin/service nginx reload"
