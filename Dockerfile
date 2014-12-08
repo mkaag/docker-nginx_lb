@@ -21,6 +21,11 @@ ADD build/policy-rc.d /usr/sbin/policy-rc.d
 # Disable SSH
 RUN rm -rf /etc/service/sshd /etc/my_init.d/00_regen_ssh_host_keys.sh
 
+# Ensure UTF-8
+RUN locale-gen en_US.UTF-8
+ENV LANG       en_US.UTF-8
+ENV LC_ALL     en_US.UTF-8
+
 CMD ["/sbin/my_init"]
 
 # Nginx Installation
