@@ -46,7 +46,7 @@ mkaag/nginx_lb /sbin/my_init -- bash /usr/local/bin/confd-watch
 ### etcd structure
 
 ```bash
-ectdctl set /services/production/domain domain.com
-ectdctl set /services/production/root /opt/apps/public
+etcdctl set /services/production/domain domain.com
+etcdctl set /services/production/root /opt/apps/public
 etcdctl set /services/production/upstream/127.0.0.1 127.0.0.1:9001
 ```
