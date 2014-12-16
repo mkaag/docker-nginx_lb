@@ -31,7 +31,7 @@ CMD ["/sbin/my_init"]
 # Nginx Installation
 ENV NEWRELIC_LICENSE false
 ENV NEWRELIC_APP false
-ENV CONFD_VERSION 0.6.3
+ENV CONFD_VERSION 0.7.0
 
 RUN \
     sed -i 's/^# \(.*-backports\s\)/\1/g' /etc/apt/sources.list && \

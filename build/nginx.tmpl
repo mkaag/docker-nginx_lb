@@ -4,10 +4,11 @@ upstream production_pool {
 }
 
 server {
-    listen      80  default_server;
-    server_name {{getv "/domain"}};
-    root /var/www;
-
+    listen                80  default_server;
+    server_name           {{getv "/domain"}};
+    root                  /var/www;
+    index                 index.php index.html;
+ 
     location ~* \.(html|jpg|jpeg|gif|png|css|js|ico|xml)$ {
         access_log        off;
         log_not_found     off;
