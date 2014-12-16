@@ -56,6 +56,7 @@ ADD build/confd-watch /usr/local/bin/confd-watch
 ADD build/nginx.toml /etc/confd/conf.d/nginx.toml
 ADD build/nginx.tmpl /etc/confd/templates/nginx.tmpl
 ADD build/nginx.conf /etc/nginx/nginx.conf
+ADD build/ee_fastcgi_params /etc/nginx/ee_fastcgi_params
 
 WORKDIR /usr/local/bin
 RUN \
