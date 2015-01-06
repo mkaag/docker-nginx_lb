@@ -31,7 +31,7 @@ CMD ["/sbin/my_init"]
 # Nginx Installation
 ENV NEWRELIC_LICENSE false
 ENV NEWRELIC_APP false
-ENV CONFD_VERSION 0.7.0
+ENV CONFD_VERSION 0.7.1
 
 RUN \
     sed -i 's/^# \(.*-backports\s\)/\1/g' /etc/apt/sources.list && \
@@ -63,6 +63,7 @@ RUN \
     curl -s -L https://github.com/kelseyhightower/confd/releases/download/v$CONFD_VERSION/confd-$CONFD_VERSION-linux-amd64 -o confd; \
     chmod +x confd; \
     chmod +x confd-watch; \
+    chmod +x /etc/my_init.d/10_setup_newrelic.sh; \
     rm /etc/nginx/sites-enabled/default
 
 EXPOSE 80 443
