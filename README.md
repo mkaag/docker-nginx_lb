@@ -38,7 +38,6 @@ mkaag/nginx_lb /sbin/my_init -- bash /usr/local/bin/confd-watch
 ```bash
 docker run -d \
 -e "NEWRELIC_LICENSE=your_license" \
--e "NEWRELIC_APP=your_app" \
 -p 443:443 -p 80:80 \
 mkaag/nginx_lb /sbin/my_init -- bash /usr/local/bin/confd-watch
 ```
