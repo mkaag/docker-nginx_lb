@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 NEWRELIC_LICENSE=${NEWRELIC_LICENSE:-false}
 if [ "$NEWRELIC_LICENSE" != "false" ]; then
