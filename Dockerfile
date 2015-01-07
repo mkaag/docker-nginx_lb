@@ -26,8 +26,6 @@ RUN locale-gen en_US.UTF-8
 ENV LANG       en_US.UTF-8
 ENV LC_ALL     en_US.UTF-8
 
-CMD ["/sbin/my_init"]
-
 # Nginx Installation
 ENV NEWRELIC_LICENSE false
 ENV NEWRELIC_APP false
@@ -69,6 +67,8 @@ RUN \
 
 EXPOSE 80 443
 VOLUME ["/var/www"]
+
+CMD ["/sbin/my_init"]
 # End Nginx
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
