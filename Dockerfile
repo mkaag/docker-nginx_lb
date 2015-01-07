@@ -30,6 +30,7 @@ CMD ["/sbin/my_init"]
 
 # Nginx Installation
 ENV NEWRELIC_LICENSE false
+ENV NEWRELIC_APP false
 ENV CONFD_VERSION 0.7.1
 
 RUN \
