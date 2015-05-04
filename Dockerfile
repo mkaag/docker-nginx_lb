@@ -6,7 +6,7 @@ MAINTAINER Maurice Kaag <mkaag@me.com>
 # -----------------------------------------------------------------------------
 ENV NEWRELIC_LICENSE    false
 ENV NEWRELIC_APP        false
-ENV CONFD_VERSION       0.8.0
+ENV CONFD_VERSION       0.9.0
 
 # -----------------------------------------------------------------------------
 # Pre-install
